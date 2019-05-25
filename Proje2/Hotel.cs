@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proje2
 {
-    class Otel //otel sınıfı
+    class Hotel //otel sınıfı
     {
     }
 }
