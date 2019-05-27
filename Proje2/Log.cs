@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proje2
 {
-    class Log
+    class Log //loglar buradan yazılacak
     {
     }
 }

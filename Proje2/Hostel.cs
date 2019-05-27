@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proje2
 {
-    class Hostel
+    class Hostel: Hotel //otel tipi
     {
     }
 }
