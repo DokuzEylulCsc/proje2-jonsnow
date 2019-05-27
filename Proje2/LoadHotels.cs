@@ -8,5 +8,19 @@ namespace Proje2
 {
     class LoadHotels
     {
+
+        public void getHotels()
+        {
+
+        }
+        public void saveHotels()
+        {
+
+        }
+        void fillHotels()
+        {
+
+        }
+
     }
 }

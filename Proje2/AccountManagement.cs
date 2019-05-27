@@ -21,12 +21,33 @@ namespace Proje2
 
         void loginUser()
         {
-            
+
         }
 
         void loginAdmin()
         {
 
         }
+        public void firstUser()
+        {
+
+        }
+        public void updateUserList()
+        {
+
+        }
+        public bool Register()
+        {
+            return false;
+        }
+        public void loadTxt()
+        {
+        
+        }
+        public void saveTxt()
+        {
+         
+        }
+
     }
 }

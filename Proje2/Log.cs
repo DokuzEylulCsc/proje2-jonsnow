@@ -8,5 +8,9 @@ namespace Proje2
 {
     class Log //loglar buradan yazılacak
     {
+        public void addLog()
+        {
+
+        }
     }
 }

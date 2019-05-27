@@ -8,5 +8,11 @@ namespace Proje2
 {
     class Reservation //rezervasyon sınıfı
     {
+        public Reservation()
+        {
+
+        }
+
+
     }
 }

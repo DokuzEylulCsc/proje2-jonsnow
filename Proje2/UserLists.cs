@@ -16,7 +16,7 @@ namespace Proje2
             if (list.Count == 0)
                 return false;
 
-            foreach(User i in list)
+            foreach (User i in list)
             {
                 if (i.Username == username)
                 {
@@ -34,6 +34,20 @@ namespace Proje2
         {
             list.Add(new User(username));
         }
+        public void loadTxt()
+        {
+
+        }
+
+        public void saveTxt()
+        {
+
+        }
+        public void loginAdmin()
+        {
+
+        }
 
     }
+
 }
