@@ -8,3 +8,7 @@ C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.csproj.
 C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.exe
 C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.pdb
 C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.Form1.resources
+C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.MainForm.resources
+C:\Users\Cagatay\Documents\GitHub\proje2-jonsnow\Proje2\obj\Debug\Proje2.csproj.CopyComplete
