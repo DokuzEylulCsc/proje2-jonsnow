@@ -8,10 +8,10 @@ namespace Proje2
 {
     class Room //base oda
     {
-        int floor, no, price;
-        bool isFull, isHaveJacuzzi;
+        int floor, no, price; // ücret vb propslar
+        bool isFull, isHaveJacuzzi; //dolu yada jakuzi boolları
 
-        public Room(int floor, int no, bool isFull, bool isHaveJacuzzi, int price)
+        public Room(int floor, int no, bool isFull, bool isHaveJacuzzi, int price) //constructor
         {
             this.floor = floor;
             this.no = no;
@@ -20,7 +20,7 @@ namespace Proje2
             this.price = price;
         }
 
-        public int Floor
+        public int Floor //propsların get ve setleri
         {
             get { return floor; }
         }
