@@ -1,0 +1,1 @@
+Projede ekstra olarak sadece newtonsoft.json kullanýlmýþtýr.(ekstra ek kurulum gerektirmez, her duruma karþý bilgilendirilmek için yazýlmýþtýr)
