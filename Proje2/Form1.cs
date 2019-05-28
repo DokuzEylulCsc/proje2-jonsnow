@@ -15,7 +15,7 @@ namespace Proje2
     public partial class Form1 : Form
     {
 
-        AccountManagement manage = new AccountManagement();
+        AccountManagement manage = new AccountManagement(); //hesapların vb durumların yönetildiği nesne
         MainForm main = null;
         Log log = new Log(); //log nesnesi
 
@@ -30,15 +30,10 @@ namespace Proje2
 
         private void label1_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory);
-            //StreamReader stream_read = new StreamReader(AppDomain.CurrentDomain.BaseDirectory+ "deneme.txt");
-            //string js_data = stream_read.ReadToEnd();
-            //User user = JsonConvert.DeserializeObject<User>(js_data);
-            //MessageBox.Show(user.Name);
-            //manage.loadTxt();
+            
         }
 
-        private void loginUser_Click(object sender, EventArgs e)
+        private void loginUser_Click(object sender, EventArgs e) //login butonuna tıklandığında uygulanan kontrol
         {
             try
             {
@@ -52,7 +47,7 @@ namespace Proje2
                     main.ShowDialog();
                 }
             }
-            catch(FormatException ex)
+            catch(FormatException ex) //özel istisna
             {
                 log.addLog(ex);
             }
@@ -60,15 +55,15 @@ namespace Proje2
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if(textBoxRegister.Visible == false)
+        private void button1_Click(object sender, EventArgs e) //Kullanıcı üye olduğunda daha önce bu adla kullanıcı olup olmadığını kontrol eden
+        {                                                      //ilk olarak gerekli alanları görünür hale getirir eğer görünür ise kontrolü yapar
+            if(textBoxRegister.Visible == false)    
             {
                 label4.Visible = true;
                 textBoxRegister.Visible = true;
             } else
             {
-                if(textBoxRegister.TextLength > 4)
+                if(textBoxRegister.TextLength > 4)//kullanıcı adı minimum 5 karakter olmalı
                 {
                     bool result = manage.Register(textBoxRegister.Text.ToLower());
                     if (!result)
@@ -83,30 +78,29 @@ namespace Proje2
                     }
                 } else
                 {
-                    MessageBox.Show("Username minimum 5 karakter olmalıdır.");
+                    MessageBox.Show("Username minimum 5 karakter olmalıdır."); 
                 }
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //gerekli bilgileri daha kullanıcı online olmadan çeker.
         {
             manage.loadTxt();
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e) //form kapatılırken güncel bilgileri kaydeder
         {
             manage.saveTxt();
         }
 
-        private void loginAdmin_Click(object sender, EventArgs e)
+        private void loginAdmin_Click(object sender, EventArgs e) ///admin olarak hesap açmak
         {
-            //AccountManagement admin = new AccountManagement(true);
-            AdminForm main = new AdminForm(this);
-            this.Hide();
-            main.ShowDialog();
+            AdminForm main = new AdminForm(this); //admin formuna form1 constructor a gönderilir
+            this.Hide(); //form 1 gizlenir
+            main.ShowDialog(); //admin form açılır
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e) //görsellik için yapılmış bir şey.
         {
             lbltxt.Left = lbltxt.Left - 1; //http://www.simplylearnprogramming.com/text-scrolling-windows-application-csharp/53
             if (lbltxt.Left + lbltxt.Width <= 0)
