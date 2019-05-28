@@ -8,12 +8,26 @@ namespace Proje2
 {
     class User //her üye için bilgiler
     {
-        string username, name, surname;
-        int phone;
+        string username, name, surname, phone;
 
+        List<Reservation> reservationList = new List<Reservation>();
+        List<Reservation> historyReserve = new List<Reservation>();
+        // Atanılan özellikler için get ve set methodları
         public User(string username)
         {
             this.username = username;
+        }
+
+        public List<Reservation> ReservationList
+        {
+            get { return reservationList; }
+            set { reservationList = value; }
+        }
+
+        public List<Reservation> HistoryReserve
+        {
+            get { return historyReserve; }
+            set { historyReserve = value; }
         }
 
         public string Username
@@ -33,7 +47,7 @@ namespace Proje2
             set { surname = value; }
         }
 
-        public int PhoneNumber
+        public string PhoneNumber
         {
             get { return phone; }
             set { phone = value; }
