@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Proje2
 {
-    class Hostel: Hotel //otel tipi
+    class Hostel : Hotel
     {
+        public Hostel(List<Room> roomList, string hostelName, int star, string city) : base(roomList, hostelName, star, city)
+        {
+
+        }
+
     }
 }
