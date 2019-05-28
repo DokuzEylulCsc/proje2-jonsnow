@@ -40,6 +40,7 @@ namespace Proje2
         }
 
         private void AdminForm_FormClosed(object sender, FormClosedEventArgs e)
+            //Form kapatıldığı anda ana forma geri geliyoruz.
         {
             form1.Show();
         }
@@ -51,7 +52,9 @@ namespace Proje2
 
         private void buttonGoHotel_Click(object sender, EventArgs e)
         {
+
             if(listHotel.SelectedIndex != -1)
+                //Otele gidildiği anda kullanılacak araçlar..
             {
                 hotelRoom = load.Hotels[listHotel.SelectedIndex].RoomList;
                 loadRooms();
@@ -73,7 +76,7 @@ namespace Proje2
 
         private void listRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            //Seçilen otelin özellikleri.
             panelReserve.Visible = true;
 
             labelNo.Text = hotelRoom[listRooms.SelectedIndex].No.ToString();
@@ -88,6 +91,7 @@ namespace Proje2
 
         private void listHotel_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Hotel listesi indexler değiştiği anda değişen labeller
             panelHotelInfo.Visible = true;
             labelHotelFullness.Text = "%" + load.Hotels[listHotel.SelectedIndex].Fullness.ToString();
             labelHotelStar.Text = load.Hotels[listHotel.SelectedIndex].Star.ToString();
@@ -96,6 +100,7 @@ namespace Proje2
 
         private void goBack_Click(object sender, EventArgs e)
         {
+            //Geri buttonuna tıklanıldığında gösterilecek araçlar.
             listHotel.Visible = true;
             listRooms.Visible = false;
             panelReserve.Visible = false;
@@ -109,11 +114,13 @@ namespace Proje2
 
         private void openHotel_Click(object sender, EventArgs e)
         {
+            //Otel aç buttonu ile paneli kullanılabilir hale getiriyoruz.
             panelCreateHotel.Visible = true;
         }
 
         private void createHotel_Click(object sender, EventArgs e)
         {
+            //Girilen textler ile otel oluşturuyoruz.
             Hotel newHotel = null;
 
             if (radioButton1.Checked == true)
@@ -123,7 +130,7 @@ namespace Proje2
             else
                 newHotel = new Boutique(new List<Room>(), textBoxName.Text + " Butik Otel", int.Parse(starBox.SelectedItem.ToString()), textBoxCity.Text);
 
-            foreach (Hotel i in load.Hotels) //aynı isimde 2 otel açmayı engellemek için.
+            foreach (Hotel i in load.Hotels) //aynı isimde 2 otel açmayı engellemek için..
                 if (i.HotelName == newHotel.HotelName)
                 {
                     MessageBox.Show("Bu isimde otel zaten var.");
@@ -139,11 +146,13 @@ namespace Proje2
 
         private void openRoom_Click(object sender, EventArgs e)
         {
+            //Oda açma buttonu ile paneli etkinleştiriyoruz.
             panelCreateRoom.Visible = true;
         }
 
         private void createRoom_Click(object sender, EventArgs e)
         {
+            //Oda oluşturma butonunu ile seçili radiobuttonlara göre özellikte oda açıyoruz..
             Room newRoom = null;
             bool jakuzi = checkBox.Checked;
 
